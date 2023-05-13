@@ -4,7 +4,7 @@
     <title>HOMEPAGE</title>
 </head>
 <body>
-    <h2>dato il nome di una provincia inserito dall'utente, visualizzarne i confini su una mappa di contextily</h2>
+    <h2>esercizio 1</h2>
     <form action="/esercizio1" method = "GET">
         
 
@@ -12,15 +12,36 @@
     </form> <br> <br>
     
     
-    <h2>creare un nuovo geodataset contenente i comuni di quella provincia</h2>
+    <h2>visualizzi su una mappa i Navigli e i fiumi da cui prendono l'acqua. Utilizzare colori diversi per rappresentare i navigli rispetto ai fiumi ed evidenziare bene i percorsi sulla mapp</h2>
+    
     <form action="/esercizio2" method = "GET">
         
-        <input type="text" name = "provinciaInput2" ></input> <br>
 
         <p><input type = "submit" value = "Clicca per conoscere i dati" /></p>
     </form> <br> <br>
 
+    <h2>visualizzi su una mappa i corsi d'acqua che passano in un comune inserito dall'utente</h2>
     
+    <form action="/esercizio3" method = "GET">
+        
+        <label for="ciao">Seleziona una regione da un menù: </label>
+        <select name = "comuneInput" id = "ciao">
+            {% for r in lista %}
+                <option value = "{{r}}">{{r}}</option>
+            {% endfor %}
+        </select><br>
+       
+        <input type = "submit" value="visualizzare una mappa">
+    </form> <br> <br>
+
+    <h2>visualizzi su una mappa un fiume inserito dall'utente con tutti i comuni che attraversa. Se attraversa Milano, visualizzare solo i quartieri che attraversa</h2>
+    
+    <form action="/esercizio4" method = "GET">
+        
+        <input type="text" name = "fiumeInput" ></input> <br>
+        <p><input type = "submit" value = "Clicca per conoscere i dati" /></p>
+    </form> <br> <br>
+
 
 
 </body>
